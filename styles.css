@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* ### Primary */
+    --Grayish-blue: hsl(237, 18%, 59%);
+    --Soft-red: hsl(345, 95%, 68%);
+    /* ### Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Dark-desaturated-blue: hsl(236, 21%, 26%);
+    --Very-dark-blue: hsl(235, 16%, 14%);
+    --Very-dark-mostly-black-blue: hsl(234, 17%, 12%);
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Red Hat Text', sans-serif;
+}
+body{
+    background-color:  var(--Very-dark-blue);
+    background-image: url(./images/bg-stars.svg);
+}
+h1{
+    color: var(--White);
+    text-align: center;
+}
+p{
+    font-size: 1.4rem;
+    letter-spacing: 1em;
+    color: var(--Grayish-blue);
+    text-align: center;
+}
+
+
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.clock{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.clock h1{
+    font-size: 2rem;
+    letter-spacing: .4em;
+    text-transform: uppercase;
+}
+.time{
+    display: flex;
+    justify-content: center;
+    margin: 6em 0;
+}
+
+/****************** Card styling start ****************/
+.card_u, .card_d{
+    width: 20rem;
+    height: 8rem;
+    overflow: hidden;
+    margin: 0 4rem;
+    position: relative;  
+}
+
+.card_u{
+    border-radius: 1.6rem 1.6rem 0 0 ;
+    background-color: var(--Dark-desaturated-blue);
+    filter: opacity(.6);
+}
+.card_d{
+    border-radius: 0 0 1.6rem 1.6rem;
+    background-color: var(--Dark-desaturated-blue);
+    margin-bottom: 4rem;
+    box-shadow: 0px 1.2rem black;
+    
+}
+
+/******* Adding corners cutout start *********/
+.card_d::before, .card_d::after, .card_u::before, .card_u::after{
+    content: "";
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--Very-dark-mostly-black-blue);
+    position: absolute;
+}
+.card_u::before{
+    bottom: 0;
+    left: 0;
+    border-top-right-radius: 100%;
+}
+.card_u::after{
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 100%;
+}
+
+.card_d::before{
+    border-bottom-right-radius: 100%;
+}.card_d::after{
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 100%;
+}
+/******* Adding corners cutout end *********/
+
+.card_u h1, .card_d h1{
+    letter-spacing: 0;
+    text-align: center;
+    font-size: 10rem;
+    color: var(--Soft-red);
+}
+.card_u h1{
+    padding-top: 1.3rem;
+}
+
+.card_d h1{
+    margin: 0 auto;
+    margin-top: -6.7rem;
+    
+}
+/****************** Card styling end****************/
+
+
+.socials{
+    width: 100%;
+    height: 200px;
+    background-image: url(./images/pattern-hills.svg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social_icon{
+    margin: 0 2rem;
+}
+.social_icon :hover,.social_icon :hover{
+    fill: var(--Soft-red);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
