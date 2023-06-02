@@ -60,6 +60,7 @@ p{
 }
 
 /****************** Card styling start ****************/
+
 .card_u, .card_d{
     width: 20rem;
     height: 8rem;
@@ -80,6 +81,7 @@ p{
 }
 
 /******* Adding corners cutout start *********/
+
 .card_d::before, .card_d::after, .card_u::before, .card_u::after{
     content: "";
     display: block;
@@ -123,6 +125,7 @@ p{
     margin-top: -6.7rem;
     
 }
+
 /****************** Card styling end ****************/
 
 

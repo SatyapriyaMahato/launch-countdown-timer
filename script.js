@@ -19,7 +19,7 @@ let x = setInterval(function() {
   let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
-  // Output the result in an element with id="demo"
+  // Output the result "
   document.getElementById("day_u").innerText = days;
   document.getElementById("day_d").innerText = days;
   document.getElementById("hour_u").innerText = hours;
@@ -29,9 +29,9 @@ let x = setInterval(function() {
   document.getElementById("second_u").innerText = seconds;
   document.getElementById("second_d").innerText = seconds;
     
-  // If the count down is over, write some text 
-//   if (distance < 0) {
-//     clearInterval(x);
-//     document.getElementById("demo").innerHTML = "EXPIRED";
-//   }
+//   If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("time").innerHTML = "EXPIRED";
+  }
 }, 1000);
