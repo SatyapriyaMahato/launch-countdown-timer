@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://github.com/SatyapriyaMahato/room-homepage)
-- Live Site URL: [Live site](https://satyapriyamahato.github.io/room-homepage/)
+- Solution URL: [Solution](https://github.com/SatyapriyaMahato/launch-countdown-timer)
+- Live Site URL: [Live site](https://satyapriyamahato.github.io/launch-countdown-timer/)
 
 ## My process
 
@@ -45,7 +45,7 @@ Users should be able to:
 
 
 ### What I learned
-I learned how to work with javascript functions, conditional statements and loops- 
+I learned how to work with css animations and transition. 
 
 ### Continued development
 I will exploring more on javascript and get a good grip on it.
