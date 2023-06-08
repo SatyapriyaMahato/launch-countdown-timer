@@ -59,9 +59,19 @@ p{
     margin: 6em 0;
 }
 
+.card_container{
+    position: relative;
+}
+.card{
+    position: relative;
+    top: 0;
+}
 /****************** Card styling start ****************/
 
-.card_u, .card_d{
+.card_u,
+.card_d,
+.top-flip,
+.bottom-flip{
     width: 20rem;
     height: 8rem;
     overflow: hidden;
@@ -70,11 +80,11 @@ p{
     background-color: var(--Dark-desaturated-blue);  
 }
 
-.card_u{
+.card_u, .top-flip{
     border-radius: 1.6rem 1.6rem 0 0 ;
     filter: opacity(.6);
 }
-.card_d{
+.card_d, .bottom-flip{
     border-radius: 0 0 1.6rem 1.6rem;
     margin-bottom: 4rem;
     box-shadow: 0px 1.2rem black;  
@@ -82,7 +92,14 @@ p{
 
 /******* Adding corners cutout start *********/
 
-.card_d::before, .card_d::after, .card_u::before, .card_u::after{
+.card_d::before,
+.card_d::after, 
+.card_u::before, 
+.card_u::after,
+.top-flip::before,
+.bottom-flip::after,
+.top-flip::before,
+.bottom-flip::after{
     content: "";
     display: block;
     width: 1rem;
@@ -90,41 +107,82 @@ p{
     background-color: var(--Very-dark-mostly-black-blue);
     position: absolute;
 }
-.card_u::before{
+.card_u::before,
+.top-flip::before{
     bottom: 0;
     left: 0;
     border-top-right-radius: 100%;
 }
-.card_u::after{
+.card_u::after,
+.top-flip::after{
     bottom: 0;
     right: 0;
     border-top-left-radius: 100%;
 }
 
-.card_d::before{
+.card_d::before,
+.bottom-flip::before{
     border-bottom-right-radius: 100%;
-}.card_d::after{
+}.card_d::after,
+.bottom-flip::after{
     top: 0;
     right: 0;
     border-bottom-left-radius: 100%;
 }
 /******* Adding corners cutout end *********/
 
-.card_u h1, .card_d h1{
+.card_u h1,
+.card_d h1,
+.top-flip h1,
+.bottom-flip h1{
     letter-spacing: 0;
     text-align: center;
     font-size: 10rem;
     color: var(--Soft-red);
 }
-.card_u h1{
+.card_u h1, .top-flip h1{
     padding-top: 1.3rem;
 }
 
-.card_d h1{
+.card_d h1, .bottom-flip h1{
     margin: 0 auto;
     margin-top: -6.7rem;
     
 }
+
+
+
+/********* Animation **************/
+.top-flip {
+    background-color: var(--Dark-desaturated-blue);
+    position: absolute;
+    top: 0;
+    animation: flip-top 250ms ease-in;
+    transform-origin: bottom;
+  }
+  
+  @keyframes flip-top {
+    100% {
+      transform: rotateX(90deg);
+      
+    }
+  }
+  
+  .bottom-flip {
+    background-color: var(--Dark-desaturated-blue);
+    position: absolute;
+    top: 8rem;
+    animation: flip-bottom 250ms ease-out 250ms;
+    transform-origin: top;
+    transform: rotateX(90deg);
+  }
+  
+  @keyframes flip-bottom {
+    100% {
+      transform: rotateX(0deg);
+    }
+  }
+
 
 /****************** Card styling end ****************/
 
